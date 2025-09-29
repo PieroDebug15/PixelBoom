@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>PixelBoom — Tienda de Videojuegos en Perú</title>
+  <meta name="description"
+    content="PixelBoom: compra juegos digitales y físicos para PC, PlayStation, Xbox y Nintendo. Ofertas, preventas y packs en Perú." />
+  <meta name="keywords"
+    content="videojuegos, tienda, Perú, PlayStation, Xbox, Nintendo, PC, Steam, ofertas, preventa" />
+
+  <meta property="og:title" content="PixelBoom — Tu tienda gamer en Perú" />
+  <meta property="og:description" content="Ofertas y novedades en juegos para todas las plataformas." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="img/hero_gamer.jpg" />
+  <meta property="og:url" content="https://tudominio.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="img/favicon.png" type="image/png" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="./css/normalize.css" />
+  <link rel="stylesheet" href="estilos.css" />
+
+  <script src="https://kit.fontawesome.com/d9cdfd874a.js" crossorigin="anonymous" defer></script>
+</head>
+
+<body>
+  <header role="banner">
+    <div class="contenedor">
+      <div class="fila" style="align-items:center">
+        <div class="columna-50">
+          <a href="index.html" aria-label="Ir al inicio">
+            <img src="img/Logo.png" class="logo" alt="Logo PixelBoom" loading="lazy" />
+          </a>
+        </div>
+        <div class="columna-50">
+          <nav aria-label="Navegación principal">
+            <a href="#inicio">Inicio</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#ofertas">Ofertas</a>
+            <a href="#novedades">Novedades</a>
+            <a href="#soporte">Soporte</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <section id="inicio" aria-label="Sección de inicio">
+
+      <img src="img/hero_gamer.jpg" alt="Banner con consola y joystick iluminados estilo gamer" />
+      <div class="bloque-inicio">
+        <h1>Bienvenid@ a PixelBoom</h1>
+        <p>Juegos digitales y físicos para PC, PlayStation, Xbox y Nintendo</p>
+        <a href="#catalogo" class="boton boton-verde">Ver Catálogo</a>
+        <a href="#ofertas" class="boton boton-verde">Ver Ofertas</a>
+      </div>
+    </section>
+
+    <section id="nosotros" class="seccion" aria-labelledby="titulo-cats">
+      <div class="contenedor">
+        <h2 id="titulo-cats">Compra por categoría</h2>
+        <div class="row" role="list">
+          <div class="columna columna-33" role="listitem">
+            <div class="cuadrado-perfecto2">
+              <img src="img/Acción.png" alt="Categoría Acción" loading="lazy" />
+              <h3>Acción</h3>
+            </div>
+          </div>
+          <div class="columna columna-33" role="listitem">
+            <div class="cuadrado-perfecto2">
+              <img src="img/Deportes.png" alt="Categoría Deportes" loading="lazy" />
+              <h3>Deportes</h3>
+            </div>
+          </div>
+          <div class="columna columna-33" role="listitem">
+            <div class="cuadrado-perfecto2">
+              <img src="img/Aventura.png" alt="Categoría Aventura" loading="lazy" />
+              <h3>Aventura</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalogo" class="seccion" aria-labelledby="titulo-catalogo">
+      <div class="contenedor">
+        <h2 id="titulo-catalogo">Catálogo destacado</h2>
+
+        <div class="row" style="margin-bottom:1rem">
+          <div class="columna columna-33">
+            <label for="filtro-plataforma" class="visually-hidden">Filtrar por plataforma</label>
+            <select id="filtro-plataforma" class="form-control">
+              <option value="all">Todas las plataformas</option>
+              <option value="pc">PC</option>
+              <option value="ps">PlayStation</option>
+              <option value="xb">Xbox</option>
+              <option value="nt">Nintendo</option>
+            </select>
+          </div>
+          <div class="columna columna-33">
+            <label for="filtro-orden" class="visually-hidden">Ordenar</label>
+            <select id="filtro-orden" class="form-control">
+              <option value="popular">Más populares</option>
+              <option value="recientes">Más recientes</option>
+              <option value="precio_asc">Precio: menor a mayor</option>
+              <option value="precio_desc">Precio: mayor a menor</option>
+            </select>
+          </div>
+          <div class="columna columna-33">
+            <input type="search" class="form-control" id="buscador" placeholder="Buscar juego..." />
+          </div>
+        </div>
+
+        <div class="row" role="list" id="grid-productos">
+
+          <article class="columna columna-33" role="listitem" itemscope itemtype="https://schema.org/Product"
+            data-plataforma="ps">
+            <div class="cuadrado-perfecto2">
+              <img src="img/Portada_God_of_War_Ragnarok.webp" alt="God of War Ragnarok para PlayStation" loading="lazy"
+                itemprop="image" />
+              <h3 itemprop="name">God of War: Ragnarök</h3>
+              <p class="badges">
+                <span title="PlayStation"><i class="fa-brands fa-playstation"></i></span>
+              </p>
+              <p itemprop="description">Acción/aventura épica — Español LATAM</p>
+              <p class="precio" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <span itemprop="priceCurrency" content="PEN">S/</span><span itemprop="price"
+                  content="299.00">299.00</span>
+              </p>
+              <button class="boton boton-verde" data-id="gow-ps">Añadir al carrito</button>
+            </div>
+          </article>
+
+
+          <article class="columna columna-33" role="listitem" itemscope itemtype="https://schema.org/Product"
+            data-plataforma="pc">
+            <div class="cuadrado-perfecto2">
+              <img src="img/Portada_Elden_Ring.jpg" alt="Elden Ring para PC (Steam)" loading="lazy" itemprop="image" />
+              <h3 itemprop="name">Elden Ring</h3>
+              <p class="badges">
+                <span title="PC/Steam"><i class="fa-brands fa-steam"></i></span>
+              </p>
+              <p itemprop="description">RPG de mundo abierto — Clave Steam</p>
+              <p class="precio" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <span itemprop="priceCurrency" content="PEN">S/</span><span itemprop="price"
+                  content="199.00">199.00</span>
+              </p>
+              <button class="boton boton-verde" data-id="elden-pc">Añadir al carrito</button>
+            </div>
+          </article>
+
+
+          <article class="columna columna-33" role="listitem" itemscope itemtype="https://schema.org/Product"
+            data-plataforma="nt">
+            <div class="cuadrado-perfecto2">
+              <img src="img/The_Legend_of_Zelda_Tears_of_the_Kingdom_cover.jpg"
+                alt="Zelda Tears of the Kingdom para Nintendo" loading="lazy" itemprop="image" />
+              <h3 itemprop="name">Zelda: Tears of the Kingdom</h3>
+              <p class="badges">
+                <span title="Nintendo Switch"><i class="fa-solid fa-gamepad"></i></span>
+              </p>
+              <p itemprop="description">Aventura — Físico para Switch</p>
+              <p class="precio" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <span itemprop="priceCurrency" content="PEN">S/</span><span itemprop="price"
+                  content="279.00">279.00</span>
+              </p>
+              <button class="boton boton-verde" data-id="zelda-nt">Añadir al carrito</button>
+            </div>
+          </article>
+
+
+          <article class="columna columna-33" role="listitem" itemscope itemtype="https://schema.org/Product"
+            data-plataforma="xb">
+            <div class="cuadrado-perfecto2">
+              <img src="img/Portada_Forza-Horizon_5.jpg" alt="Forza Horizon para Xbox" loading="lazy"
+                itemprop="image" />
+              <h3 itemprop="name">Forza Horizon 5</h3>
+              <p class="badges">
+                <span title="Xbox"><i class="fa-brands fa-xbox"></i></span>
+              </p>
+              <p itemprop="description">Conducción — Edición estándar</p>
+              <p class="precio" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <span itemprop="priceCurrency" content="PEN">S/</span><span itemprop="price"
+                  content="249.00">249.00</span>
+              </p>
+              <button class="boton boton-verde" data-id="forza-xb">Añadir al carrito</button>
+            </div>
+          </article>
+
+
+          <article class="columna columna-33" role="listitem" itemscope itemtype="https://schema.org/Product"
+            data-plataforma="pc">
+            <div class="cuadrado-perfecto2">
+              <img src="img/Portada_Hollow_Knight.png" alt="Hollow Knight para PC" loading="lazy" itemprop="image" />
+              <h3 itemprop="name">Hollow Knight</h3>
+              <p class="badges">
+                <span class="badge-oferta">-40%</span>
+                <span title="PC/Steam"><i class="fa-brands fa-steam"></i></span>
+              </p>
+              <p itemprop="description">Metroidvania — Clave Steam</p>
+              <p class="precio" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <s>S/ 49.00</s>
+                <span itemprop="priceCurrency" content="PEN">S/</span><span itemprop="price"
+                  content="29.40">29.40</span>
+              </p>
+              <button class="boton boton-verde" data-id="hk-pc">Añadir al carrito</button>
+            </div>
+          </article>
+
+
+          <article class="columna columna-33" role="listitem" itemscope itemtype="https://schema.org/Product"
+            data-plataforma="ps">
+            <div class="cuadrado-perfecto2">
+              <img src="img/Portada_GTA_VI.webp" alt="GTA VI preventa PlayStation" loading="lazy" itemprop="image" />
+              <h3 itemprop="name">GTA VI (Preventa)</h3>
+              <p class="badges">
+                <span class="badge-preventa">Preventa</span>
+                <span title="PlayStation"><i class="fa-brands fa-playstation"></i></span>
+              </p>
+              <p itemprop="description">Acción — Incluye bono digital</p>
+              <p class="precio" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <span itemprop="priceCurrency" content="PEN">S/</span><span itemprop="price"
+                  content="369.00">369.00</span>
+                <link itemprop="availability" href="https://schema.org/PreOrder" />
+              </p>
+              <button class="boton boton-verde" data-id="gta6-ps">Reservar</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="ofertas" class="seccion" aria-labelledby="titulo-ofertas">
+      <div class="contenedor-fluid">
+        <h2 id="titulo-ofertas">Ofertas de la semana</h2>
+        <div class="row">
+          <div class="columna columna-33">
+            <div class="cuadrado-perfecto">
+              <img src="img/Pack_indies.png" alt="Pack de juegos indies" loading="lazy" />
+              <h4>Pack Indies — S/ 59.00</h4>
+            </div>
+          </div>
+          <div class="columna columna-33">
+            <div class="cuadrado-perfecto">
+              <img src="img/Pack_Familia.png" alt="Pack familiar para Nintendo" loading="lazy" />
+              <h4>Pack Familiar — S/ 149.00</h4>
+            </div>
+          </div>
+          <div class="columna columna-33">
+            <div class="cuadrado-perfecto">
+              <img src="img/Pack_Fps.png" alt="Pack de shooters para PC" loading="lazy" />
+              <h4>Pack FPS — S/ 99.00</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="novedades" class="seccion" aria-labelledby="titulo-novedades">
+      <div class="contenedor">
+        <h2 id="titulo-novedades">Novedades</h2>
+        <p>Preventas, ediciones de colección y lanzamientos recientes. <a
+            href="https://elcomercio.pe/noticias/videojuegos/">Ver todo</a></p>
+      </div>
+    </section>
+
+
+    <section id="soporte" class="seccion" aria-labelledby="titulo-soporte">
+      <h2 id="titulo-soporte" class="visually-hidden">Soporte</h2>
+
+
+      <div class="contenedor-fluid">
+        <div class="row">
+          <div class="columna columna-41 empujar-58">
+            <h3>¿Necesitas ayuda?</h3>
+            <form class="formu" onsubmit="enviardatos(); return false;" aria-label="Formulario de soporte">
+              <div class="form-blok">
+                <label for="input-nombre" class="visually-hidden">Nombre</label>
+                <input id="input-nombre" type="text" name="nombre" class="form-control" placeholder="Nombre"
+                  autocomplete="name" required />
+              </div>
+              <div class="form-blok">
+                <label for="input-email" class="visually-hidden">Correo electrónico</label>
+                <input id="input-email" type="email" name="email" class="form-control" placeholder="Email"
+                  autocomplete="email" required />
+              </div>
+              <div class="form-blok">
+                <label for="input-mensaje" class="visually-hidden">Mensaje</label>
+                <textarea id="input-mensaje" name="mensaje"
+                  placeholder="Cuéntanos tu consulta (pedido, pago, activación, etc.)" rows="5" required></textarea>
+              </div>
+              <div class="form-blok bloque-ultimo">
+                <button type="submit" class="boton boton-negro">Enviar</button>
+              </div>
+            </form>
+            <p style="margin-top:.5rem;font-size:.9rem">
+              También escríbenos al
+              <a href="https://wa.me/51987654321" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              o al correo <a href="mailto:pixellboomm@gmail.com">pixellboomm@gmail.com</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="seccion" role="contentinfo">
+    <div class="contenedor">
+      <div class="row">
+        <div class="columna columna-25">
+          <img src="img/Logo.png" class="logo-footer" alt="Logo PixelBoom blanco" loading="lazy" />
+          <p>
+            Tienda gamer peruana con envíos de codigos a nivel nacional. Claves digitales y juegos físicos con garantía.
+          </p>
+        </div>
+
+        <div class="columna columna-25">
+          <h3>Horarios</h3>
+          <ul>
+            <li>Lun–Vie: 9:00 – 19:00</li>
+            <li>Sáb: 10:00 – 17:00</li>
+          </ul>
+        </div>
+
+        <div class="columna columna-25">
+          <h3>Contáctanos</h3>
+          <address>
+            Huancayo – Perú (ventas online)<br />
+            <a href="tel:+51902533454">+51 902 533 454</a><br />
+            <a href="mailto:pixellboomm@gmail.com">pixellboomm@gmail.com</a>
+          </address>
+          <h3>Desarolladores</h3>
+          <address>
+            <a href="desarrolladores.html">Desarolladores.com</a>
+
+          </address>
+        </div>
+
+        <div class="columna columna-25">
+          <h3>Redes</h3>
+          <ul class="redes" aria-label="Redes sociales">
+            <li><a href="https://www.facebook.com/profile.php?id=61581609027215&locale=es_LA" target="_blank"
+                rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/pixelboom_ucc/" target="_blank" rel="noopener noreferrer"
+                aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://www.tiktok.com/@pixelboomuc" target="_blank" rel="noopener noreferrer"
+                aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
+            <li><a href="https://www.youtube.com/@PixelBoomUC" target="_blank" rel="noopener noreferrer"
+                aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+          </ul>
+          <ul>
+
+        </div>
+      </div>
+    </div>
+    <div class="barra-footer">&copy; PixelBoom — 2025</div>
+    <div class="barra-desarrollador"></div>
+  </footer>
+
+
+  <script src="./codigo.js"></script>
+
+
+  <script>
+    (function () {
+      const grid = document.getElementById('grid-productos');
+      const filtroPlataforma = document.getElementById('filtro-plataforma');
+      const buscador = document.getElementById('buscador');
+
+      function aplicaFiltros() {
+        const plataforma = (filtroPlataforma.value || 'all').toLowerCase();
+        const q = (buscador.value || '').toLowerCase().trim();
+
+        [...grid.querySelectorAll('article')].forEach(card => {
+          const matchPlataforma = plataforma === 'all' || (card.dataset.plataforma || '').toLowerCase() === plataforma;
+          const texto = card.innerText.toLowerCase();
+          const matchBusqueda = !q || texto.includes(q);
+          card.style.display = (matchPlataforma && matchBusqueda) ? '' : 'none';
+        });
+      }
+
+      filtroPlataforma && filtroPlataforma.addEventListener('change', aplicaFiltros);
+      buscador && buscador.addEventListener('input', aplicaFiltros);
+    })();
+  </script>
+</body>
+
+</html>
